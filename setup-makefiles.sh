@@ -27,9 +27,9 @@ INITIAL_COPYRIGHT_YEAR=2019
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-AOSP_ROOT="$MY_DIR"/../../..
+ZENX_ROOT="$MY_DIR"/../../..
 
-HELPER="$AOSP_ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="$ZENX_ROOT"/vendor/zenx/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -37,7 +37,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "${DEVICE_COMMON}" "$VENDOR" "$AOSP_ROOT" true
+setup_vendor "${DEVICE_COMMON}" "$VENDOR" "$ZENX_ROOT" true
 
 # Copyright headers and guards
 write_headers "judypn judyln"
