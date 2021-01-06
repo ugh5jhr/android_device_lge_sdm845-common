@@ -266,6 +266,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# F2FS
+PRODUCT_PACKAGES += \
+    sg_write_buffer \
+    f2fs_io \
+    check_f2fs
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
