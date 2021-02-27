@@ -900,6 +900,9 @@ service time_daemon /vendor/bin/time_daemon
     group system
     capabilities SYS_TIME
 
+# Enable PowerHAL hint processing
+setprop vendor.powerhal.init 1
+
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
