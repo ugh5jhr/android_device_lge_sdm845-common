@@ -56,7 +56,8 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # Voice assistant
 ro.opa.eligible_device=true
 
-# IORap
+# Iorap
+iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
 
 # Wifi
