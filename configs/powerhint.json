@@ -23,8 +23,10 @@
             "Values": [
                 "9999999",
                 "1420800",
-                "1324800",
-                "1132800",
+                "1228800",
+                "1056000",
+                "979200",
+                "902400",
                 "576000",
                 "748800"
             ],
@@ -117,7 +119,16 @@
             "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
             "Values": [
                 "10000",
-                "80"
+                "70"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TASchedtuneBoost",
+            "Path": "/dev/stune/top-app/schedtune.boost",
+            "Values": [
+                "10",
+                "5"
             ],
             "ResetOnInit": true
         },
@@ -218,10 +229,19 @@
             "Name": "PMQoSCpuDmaLatency",
             "Path": "/dev/cpu_dma_latency",
             "Values": [
-                "44",
+                "2c",
                 "100"
             ],
             "HoldFd": true
+        },
+        {
+            "Name": "SchedBoost",
+            "Path": "/proc/sys/kernel/sched_boost",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
         },
         {
             "Name": "PowerHALMainState",
@@ -266,6 +286,12 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "TASchedtuneBoost",
+            "Duration": 0,
+            "Value": "10"
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "CPUBWHystTriggerCount",
             "Duration": 0,
             "Value": "0"
@@ -296,6 +322,12 @@
         },
         {
             "PowerHint": "LAUNCH",
+            "Node": "SchedBoost",
+            "Duration": 3000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterMaxFreq",
             "Duration": 3000,
             "Value": "9999999"
@@ -316,7 +348,7 @@
             "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 3000,
-            "Value": "44"
+            "Value": "2c"
         },
         {
             "PowerHint": "LAUNCH",
@@ -380,6 +412,12 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
+            "Node": "SchedBoost",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUBigClusterMaxFreq",
             "Duration": 1000,
             "Value": "9999999"
@@ -406,7 +444,7 @@
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
-            "Value": "44"
+            "Value": "2c"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -460,7 +498,7 @@
             "PowerHint": "CAMERA_SHOT",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
-            "Value": "44"
+            "Value": "2c"
         },
         {
             "PowerHint": "AUDIO_LAUNCH",
@@ -478,7 +516,7 @@
             "PowerHint": "AUDIO_LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 2000,
-            "Value": "44"
+            "Value": "2c"
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -490,7 +528,7 @@
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 0,
-            "Value": "44"
+            "Value": "2c"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
@@ -502,7 +540,7 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "257000000"
+            "Value": "520000000"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
