@@ -4413,9 +4413,9 @@ case "$target" in
 	echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
 	echo 1574400 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/pl
-	echo "0:1766400 4:1056000" > /sys/module/cpu_boost/parameters/input_boost_freq
-	echo "0:1766400 4:902400" > /sys/module/cpu_boost/parameters/sub_boost_freq
-	echo 80 > /sys/module/cpu_boost/parameters/input_boost_ms
+	echo "0:1056000" > /sys/module/cpu_boost/parameters/input_boost_freq
+	echo "0:1056000" > /sys/module/cpu_boost/parameters/sub_boost_freq
+	echo 64 > /sys/module/cpu_boost/parameters/input_boost_ms
 	# Limit the min frequency to 825MHz
 	echo 825000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
