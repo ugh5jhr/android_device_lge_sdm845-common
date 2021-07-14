@@ -1,5 +1,15 @@
 <manifest version="1.0" type="device" target-level="4">
     <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
         <version>6.0</version>
@@ -741,6 +751,24 @@
         <interface>
             <name>INxpEse</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+   <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
         </interface>
     </hal>
 </manifest>
