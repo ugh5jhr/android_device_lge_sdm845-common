@@ -102,6 +102,7 @@ TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_lge_sdm845
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_sdm845
 
 # Kernel
+BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=0 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
