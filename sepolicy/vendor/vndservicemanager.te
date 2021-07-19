@@ -1,0 +1,3 @@
+#============= vndservicemanager ==============
+binder_call(vndservicemanager, init)
+binder_call(vndservicemanager, vndservicemanager)

@@ -1,0 +1,2 @@
+#============= rild ==============
+get_prop(rild, default_prop)
