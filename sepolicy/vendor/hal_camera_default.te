@@ -32,4 +32,3 @@ allow hal_camera_default ctl_bugreport_prop:file { getattr open };
 allow hal_camera_default ctl_console_prop:file { getattr open };
 allow hal_camera_default ctl_default_prop:file { getattr open };
 allow hal_camera_default ctl_dumpstate_prop:file { open };
-allow hal_camera_default ctl_dpmd_prop:file { getattr open };
