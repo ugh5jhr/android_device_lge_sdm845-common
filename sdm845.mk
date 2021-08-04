@@ -218,10 +218,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0.vendor \
     vendor.display.config@2.0
 
-# Doze
-PRODUCT_PACKAGES += \
-    LGEDoze
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
