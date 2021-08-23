@@ -127,6 +127,3 @@ ro.debuggable=0
 # LMK
 ro.lmk.debug=false
 ro.config.low_ram=false
-
-# UI
-sys.use_fifo_ui=1
