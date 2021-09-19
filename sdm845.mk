@@ -196,6 +196,10 @@ PRODUCT_PACKAGES += \
     QuadDACPanel \
     vendor.lge.hardware.audio.dac.control@1.0-service
 
+# Doze
+PRODUCT_PACKAGES += \
+    LGEDoze
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-impl \
