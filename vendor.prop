@@ -133,6 +133,11 @@ debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 persist.sys.sf.native_mode=0 
 
+# Graphics
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+vendor.display.disable_rotator_downscale=1
+
 # DPM
 persist.vendor.dpm.feature=0
 
