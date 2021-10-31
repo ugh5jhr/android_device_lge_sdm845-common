@@ -388,7 +388,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lge-libperfmgr \
-    android.hardware.power.stats@1.0-service.xiaomi
+    android.hardware.power.stats@1.0-service.lge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -438,7 +438,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/pixel
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lge/ 
