@@ -1,3 +1,9 @@
+on early-fs
+    chmod 666 /dev/goodix_fp
+
+on post-fs-data
+    mkdir /mnt/vendor/persist-lg/goodix 0700 system system
+
 # EGIS fingerprint calibration data
 on post-fs-data
    mkdir /mnt/vendor/persist-lg/egis 0700 system system
@@ -9,3 +15,4 @@ on boot
 
 on property:ro.vendor.lge.minios.bootstart=1
    stop vendor.lge-biometrics-fingerprint-hal-2-2
+
