@@ -555,7 +555,7 @@ vendor/lib64/libmmosal.so
 
 # MSM IRQ
 vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
+vendor/etc/msm_irqbalance.conf|21c04fcf75fe18ae6827ec6c27c17c30b90a528a
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
