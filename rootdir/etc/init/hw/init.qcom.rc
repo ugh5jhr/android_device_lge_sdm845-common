@@ -49,6 +49,10 @@ on early-init
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_vbif_dbgbus
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_dsi_dbgbus
 
+    # Smart charging
+    chown system system /sys/devices/platform/lge-unified-nodes/charging_enable
+    chmod 0666 /sys/devices/platform/lge-unified-nodes/charging_enable
+
   # Change ownership of sysfs power control node
     chown system graphics /sys/class/drm/card0/device/power/control
 
