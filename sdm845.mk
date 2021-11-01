@@ -44,6 +44,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
@@ -209,6 +213,8 @@ PRODUCT_PACKAGES += \
     gralloc.sdm845 \
     hwcomposer.sdm845 \
     memtrack.sdm845 \
+    libdisplayconfig.qti \
+    libqdutils \
     vendor.display.config@1.14 \
     vendor.display.config@1.14.vendor \
     vendor.display.config@2.0 \
