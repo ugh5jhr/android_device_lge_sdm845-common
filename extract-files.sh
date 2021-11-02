@@ -58,7 +58,7 @@ while [ "$1" != "" ]; do
 done
 
 if [ -z "${SRC}" ]; then
-    SRC=/system/
+    SRC=/home/ema/velvet4g/system/
 fi
 
 # Initialize the helper
