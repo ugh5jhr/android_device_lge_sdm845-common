@@ -12,11 +12,9 @@
 -->
 <config>
     <component-override package="com.android.bluetooth" >
-	    <component class=".avrcp.AvrcpTargetService" enabled="false" />
-        <component class=".avrcpcontroller.AvrcpControllerService" enabled="true" />
-        <component class=".ba.BATService" enabled="true" />
-        <component class=".hid.HidDeviceService" enabled="true" />
-        <component class=".hid.HidHostService" enabled="true" />
         <component class=".sap.SapService" enabled="true" />
+    </component-override>
+    <component-override package="com.google.android.apps.tips" >
+        <component class=".TipsMain" enabled="false" />
     </component-override>
 </config>
