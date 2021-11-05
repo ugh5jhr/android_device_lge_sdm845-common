@@ -105,13 +105,14 @@ ro.vendor.qti.am.reschedule_service=true
 ro.sys.fw.dex2oat_thread_count=8
 
 # Bluetooth
+persist.bluetooth.a2dp_offload.disabled=true
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
-persist.vendor.qcom.bluetooth.soc=cherokee
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+persist.vendor.qcom.bluetooth.enable.splita2dp=false
+ro.bluetooth.a2dp_offload.supported=false
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.bt.a2dp.aac_whitelist=false
 
 # Camera
 camera.disable_zsl_mode=true
@@ -173,6 +174,10 @@ persist.vendor.sensors.diag_buffer_mode=false
 persist.vendor.lge.sar_keeponoff=on
 persist.vendor.lge.sar_dependmode=on
 persist.vendor.lge.sar_fakestatus=off 
+
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM845
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE

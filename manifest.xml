@@ -164,8 +164,8 @@
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
@@ -177,7 +177,6 @@
             <name>IRadioConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
@@ -216,15 +215,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.1::ISoundTriggerHw/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.tetheroffload.config</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOffloadConfig</name>
-            <instance>default</instance>
-        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.control</name>
