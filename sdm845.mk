@@ -118,7 +118,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.1-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -235,8 +235,11 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml.vendor \
     libvulkan \
-    libdisplayconfig.qti \
     memtrack.sdm845 \
+    libqdutils \
+    libgralloc.system.qti \
+    libqdMetaData.system \
+    libdisplayconfig.system.qti \
     vendor.display.config@1.0.vendor \
     vendor.display.config@1.1.vendor \
     vendor.display.config@1.2.vendor \

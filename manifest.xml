@@ -42,7 +42,7 @@
         <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
+        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
             <instance>default</instance>
         </interface>
     </hal>
