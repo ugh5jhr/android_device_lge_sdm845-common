@@ -35,6 +35,10 @@
 #include "PowerSessionManager.h"
 #include "disp-power/DisplayLowPower.h"
 
+#ifndef TARGET_TAP_TO_WAKE_NODE
+#define TARGET_TAP_TO_WAKE_NODE "/sys/devices/virtual/input/lge_touch/tap2wake"
+#endif
+
 namespace aidl {
 namespace google {
 namespace hardware {
@@ -85,11 +89,39 @@ Power::Power(std::shared_ptr<HintManager> hm, std::shared_ptr<DisplayLowPower> d
     LOG(INFO) << "PowerHAL ready to take hints, Adpf update rate: " << mAdpfRateNs;
 }
 
+static int sysfs_write(const char *path, const char *s)
+{
+    char buf[80];
+    int len;
+    int ret = 0;
+    int fd = open(path, O_WRONLY);
+
+    if (fd < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error opening %s: %s\n", path, buf);
+        return -1 ;
+    }
+
+    len = write(fd, s, strlen(s));
+    if (len < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error writing to %s: %s\n", path, buf);
+
+        ret = -1;
+    }
+
+    close(fd);
+
+    return ret;
+}
+
 ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     LOG(DEBUG) << "Power setMode: " << toString(type) << " to: " << enabled;
     ATRACE_INT(toString(type).c_str(), enabled);
     PowerSessionManager::getInstance()->updateHintMode(toString(type), enabled);
     switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            sysfs_write(TARGET_TAP_TO_WAKE_NODE, enabled ? "1" : "0");
         case Mode::LOW_POWER:
             break;
         case Mode::SUSTAINED_PERFORMANCE:
@@ -102,8 +134,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             if (mSustainedPerfModeOn) {
                 break;
             }
-            [[fallthrough]];
-        case Mode::DOUBLE_TAP_TO_WAKE:
             [[fallthrough]];
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
@@ -132,7 +162,8 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool *_aidl_return) {
     bool supported = mHintManager->IsHintSupported(toString(type));
     // LOW_POWER handled insides PowerHAL specifically
-    if (type == Mode::LOW_POWER) {
+    // LOW_POWER and DOUBLE_TAP_TO_WAKE handled insides PowerHAL specifically
+    if (type == Mode::LOW_POWER || type == Mode::DOUBLE_TAP_TO_WAKE) {
         supported = true;
     }
     LOG(INFO) << "Power mode " << toString(type) << " isModeSupported: " << supported;
