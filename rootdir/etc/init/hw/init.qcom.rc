@@ -505,6 +505,8 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.judyln
+    swapon_all /vendor/etc/fstab.judypn
+    swapon_all /vendor/etc/fstab.judyp
 
     # Enable idle state listener
     write /sys/class/drm/card0/device/idle_encoder_mask 1
