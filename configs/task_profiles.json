@@ -1,17 +1,4 @@
 {
-  "Attributes": [
-    {
-      "Name": "STuneBoost",
-      "Controller": "schedtune",
-      "File": "schedtune.boost"
-    },
-    {
-      "Name": "STunePreferIdle",
-      "Controller": "schedtune",
-      "File": "schedtune.prefer_idle"
-    }
-  ],
-
   "Profiles": [
     {
       "Name": "HighEnergySaving",
@@ -20,7 +7,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "background"
           }
         }
@@ -33,8 +20,21 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
-            "Path": ""
+            "Controller": "cpuset",
+            "Path": "system"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system-background"
           }
         }
       ]
@@ -46,7 +46,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "foreground"
           }
         }
@@ -59,7 +59,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "top-app"
           }
         }
@@ -72,8 +72,21 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "rt"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraServiceHighCapacity",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-daemon-dedicated"
           }
         }
       ]
@@ -85,7 +98,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "camera-daemon"
           }
         }
@@ -98,13 +111,12 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "schedtune",
+            "Controller": "cpuset",
             "Path": "nnapi-hal"
           }
         }
       ]
     },
-
     {
       "Name": "CpuPolicySpread",
       "Actions": [
@@ -112,7 +124,7 @@
           "Name": "SetAttribute",
           "Params":
           {
-            "Name": "STunePreferIdle",
+            "Name": "UClampLatencySensitive",
             "Value": "1"
           }
         }
@@ -125,7 +137,7 @@
           "Name": "SetAttribute",
           "Params":
           {
-            "Name": "STunePreferIdle",
+            "Name": "UClampLatencySensitive",
             "Value": "0"
           }
         }
