@@ -128,9 +128,7 @@
             "Path": "/dev/cpuset/top-app/uclamp.min",
             "Values": [
                 "0",
-                "10",
-                "25",
-                "35",
+                "30",
                 "max"
             ],
             "DefaultIndex": 1,
@@ -295,7 +293,7 @@
             "PowerHint": "INTERACTION",
             "Node": "TA_uClampBoost",
             "Duration": 0,
-            "Value": "35"
+            "Value": "30"
         },
         {
             "PowerHint": "INTERACTION",
@@ -332,12 +330,6 @@
             "Node": "CPULittleClusterMinFreq",
             "Duration": 3000,
             "Value": "9999999"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "TA_uClampBoost",
-            "Duration": 3000,
-            "Value": "25"
         },
         {
             "PowerHint": "LAUNCH",
