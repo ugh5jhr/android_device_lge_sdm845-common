@@ -71,6 +71,10 @@ vendor/lib64/libexthwplugin.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libsndmonitor.so
 vendor/lib64/libspkrprot.so
+vendor/lib/hw/audio.primary.sdm845.so|ab1b06316126c8283d89f4a19caa9db1a1b9f26f
+vendor/lib64/hw/audio.primary.sdm845.so|8b613f10ed77ffc14a4077f42b5dd0ff24535d6a
+vendor/lib/libhdmiedid.so
+vendor/lib64/libhdmiedid.so
 
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
