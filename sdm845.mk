@@ -402,6 +402,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxVidcCommon \
+    libgui \
+    libgui.vendor \
     libstagefrighthw
 
 # Permissions
