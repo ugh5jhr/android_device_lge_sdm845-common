@@ -467,8 +467,11 @@ PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
-	libavservices_minijail \
-	libavservices_minijail.vendor
+    libavservices_minijail \
+    libavservices_minijail.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
 # QTI
 PRODUCT_COPY_FILES += \
