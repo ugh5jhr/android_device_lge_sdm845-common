@@ -41,6 +41,7 @@ DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=9
+persist.sys.fflag.override.settings_provider_model=false
 
 # Graphics
 debug.egl.hw=0
