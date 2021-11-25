@@ -135,6 +135,8 @@ void init_target_properties() {
     property_override("ro.product.product.model", model);
     property_override("ro.product.system.model", model);
     property_override("ro.product.vendor.model", model);
+    property_override("ro.boot.verifiedbootstate", "green");
+    property_override("ro.oem_unlock_supported", "0");
 }
 
 void vendor_load_properties() {
