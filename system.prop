@@ -97,8 +97,8 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # Media 
-debug.stagefright.omx_default_rank.sw-audio=1
-debug.stagefright.omx_default_rank=0
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=1000
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.aac_51_output_enabled=true
 media.stagefright.enable-player=true
