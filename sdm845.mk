@@ -537,6 +537,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.lge_sdm845
+
 # LiveDisplay
 #PRODUCT_PACKAGES += \
 #    vendor.lineage.livedisplay@2.0-service.lge_sdm845
