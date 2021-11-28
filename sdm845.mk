@@ -530,10 +530,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lge_sdm845
@@ -565,7 +561,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
