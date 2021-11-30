@@ -149,6 +149,14 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 system_ext/lib64/libaptX_encoder.so
 system_ext/lib64/libaptXHD_encoder.so
 
+# CACert
+-vendor/app/CACertService/CACertService.apk
+vendor/etc/cacert_location.pem
+vendor/lib64/libcacertclient.so
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+vendor/lib/libcacertclient.so
+vendor/lib/vendor.qti.hardware.cacert@1.0.so
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -446,6 +454,16 @@ vendor/firmware/a640_gmu.bin
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
+# Graphics (RenderScript) - from crosshatch RQ1A.210105.003
+vendor/lib/libRSDriver_adreno.so|730089bfdb2749669d63fce8d56323957d5ecefa
+vendor/lib/libbccQTI.so|d634a5db3ce03138d1d611ba34558a875d610e49
+vendor/lib/librs_adreno.so|9e0ae04631a58b849ea7bd0edd7eb02f087c610c
+vendor/lib/librs_adreno_sha1.so|ec33e1d62eba5c928384cce1c18f7b8d2f611019
+vendor/lib64/libRSDriver_adreno.so|5f32eff420408fe60d7e14800a213275ce0e0895
+vendor/lib64/libbccQTI.so|61732bb9193b3bf4b593d24b0605cfffd7a38e29
+vendor/lib64/librs_adreno.so|9a046223d0a88297f3188f4ff80eafaa7e46173a
+vendor/lib64/librs_adreno_sha1.so|727a62917ec8006850d2634c4d6e77e7f8ddae52
+
 # GNSS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
@@ -458,7 +476,6 @@ vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 vendor/etc/init/tloc_daemon.rc
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
-vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
@@ -467,7 +484,6 @@ vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
 vendor/lib64/libbatching.so
-vendor/lib64/libcacertclient.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofencing.so
@@ -536,7 +552,6 @@ vendor/lib64/vendor.qti.latency@2.0.so
 
 # Listen
 vendor/lib/libadpcmdec.so
-vendor/lib/libcacertclient.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libgcs-calwrapper.so
@@ -547,9 +562,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/libjnihelper.so
-vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib64/libcacertclient.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
@@ -559,7 +572,6 @@ vendor/lib64/libgcs.so
 vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
 vendor/lib64/libjnihelper.so
-vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media
@@ -657,11 +669,6 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libspcom.so
-
-# PASR
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
 # Qualcomm Display Utils
 system_ext/lib/vendor.qti.hardware.qdutils_disp@1.0.so
@@ -983,10 +990,6 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 vendor/lib/libtime_genoff.so
-
-# Touchcompanion
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
 
 # Trusted User Interface
 vendor/lib64/libsi.so
