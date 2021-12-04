@@ -124,9 +124,6 @@ persist.vendor.cne.feature=1
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Cdsrp
-vendor.fastrpc.disable.cdsprpcd.daemon=1
-
 # Display
 dev.pm.dyn_samplingrate=1
 ro.sf.lcd_density=560

@@ -44,3 +44,11 @@ service vendor.prmd /vendor/bin/prmd
    socket prm-client stream 660 system system
    user system
    group system
+
+on boot
+# msm_drm
+   write /proc/irq/218/smp_affinity_list 2
+
+# kgsl-3d0
+   write /proc/irq/209/smp_affinity_list 1
+

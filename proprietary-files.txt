@@ -18,8 +18,6 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib64/libadsp_default_listener.so
-vendor/lib/libssc_default_listener.so
-vendor/lib64/libssc_default_listener.so
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
@@ -332,6 +330,10 @@ vendor/lib64/libsdm-diag.so|e964539c6d07a8abbdfcc98f9b27878d3a09185b
 vendor/lib64/libsdm-disp-vndapis.so|68f9171c08a2ba9654aaa3a1d9b0c050ae07bd97
 vendor/lib64/libsdmextension.so|ddcc83174b5b6dbed08888002cd08674f907e777
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
+vendor/lib64/libhdcp1prov.so
+vendor/lib64/libhdcp2p2prov.so
+vendor/lib/libhdcp1prov.so
+vendor/lib/libhdcp2p2prov.so
 
 # Display postprocessing - from OnePlus6 - RKQ1.201217.002/2106301530
 vendor/bin/hw/vendor.display.color@1.0-service|f953144ced6869e640ca67930cea6d63e38f0a0d
@@ -1008,6 +1010,7 @@ vendor/lib64/libtime_genoff.so
 vendor/lib/libtime_genoff.so
 
 # Trusted User Interface
+vendor/lib/libsi.so
 vendor/lib64/libsi.so
 vendor/lib64/libtrustedapploader.so
 	

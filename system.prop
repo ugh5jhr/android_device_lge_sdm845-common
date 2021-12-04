@@ -18,6 +18,9 @@ audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
 audio.offload.video=true
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
