@@ -116,7 +116,6 @@ ro.media.recorder-max-base-layer-fps = 60
 
 # Serial Console
 ro.console.enable=0
-ro.debuggable=0
 
 # LMK
 ro.lmk.debug=false
