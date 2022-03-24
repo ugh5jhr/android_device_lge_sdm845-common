@@ -498,7 +498,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# RIL
+# Qtimapper Shim
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.mappershim \
+    vendor.qti.hardware.display.mapperextensionsshim \
+    android.hardware.graphics.mappershim
+
+# Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
