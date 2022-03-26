@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-impl \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
-    vendor.qti.hardware.display.allocator@1.0-service \
+    vendor.qti.hardware.display.allocator-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     gralloc.sdm845 \
