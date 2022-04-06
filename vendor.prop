@@ -157,7 +157,6 @@ persist.vendor.radio.add_power_save=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.enableadvancedscan=false
 
-
 # Sensors
 persist.vendor.sensors.diag_buffer_mode=false
 
