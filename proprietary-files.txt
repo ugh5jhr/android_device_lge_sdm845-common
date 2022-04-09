@@ -312,12 +312,7 @@ vendor/lib/libsdm-diag.so|4c3526bfa0cce5386d12a9132c7ea4be868bc5af
 vendor/lib/libsdm-disp-vndapis.so|2d5602785bd68ce21571012170ff776303375ca7
 vendor/lib/libsdmextension.so|514e6a82145e70a9d591be782c86bb2f44b7a20e
 vendor/lib/libtinyxml2_1.so|597d471aad4cd5c0cf73bab8bc04bac5ed95ee92
-vendor/lib64/libqseed3.so|3047207f4317d7fc81249d3b34bd42e442a5f7bd
-vendor/lib64/libsdm-color.so|3026565065b37bcfd1342c82d77bae579ea6ec08
-vendor/lib64/libsdm-diag.so|e964539c6d07a8abbdfcc98f9b27878d3a09185b
-vendor/lib64/libsdm-disp-vndapis.so|68f9171c08a2ba9654aaa3a1d9b0c050ae07bd97
 vendor/lib64/libsdmextension.so|ddcc83174b5b6dbed08888002cd08674f907e777
-vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib/libhdcp1prov.so
@@ -338,7 +333,6 @@ vendor/lib/vendor.display.color@1.4.so|3b7f6a489f66b2cc8b3e5a467b9fe3f95a59c775
 vendor/lib/vendor.display.color@1.5.so|e97e31b9567f9a6f9031063d2356e7391ba719e3
 vendor/lib/vendor.display.postproc@1.0.so|251c33b11743f5e24ca220b220da367996f3077b
 vendor/lib64/libdisp-aba.so|96126e40caaef8e32ab3498faf1e320754478103
-vendor/lib64/libdisplayqos.so|887345d6007b689c18e6bc388ba50ffffa3d4f64
 vendor/lib64/vendor.display.color@1.0.so|253cd210899ea79133c7b7b9d31429e4a8d43c32
 vendor/lib64/vendor.display.color@1.1.so|fe9b373785571bb890db27523b804dc7d4411bca
 vendor/lib64/vendor.display.color@1.2.so|f40eb8c9d39776c43448431d7c7f7ecc3e4506c3
@@ -346,6 +340,14 @@ vendor/lib64/vendor.display.color@1.3.so|3fbe0a8a317789608848f35b39ed9bfb734f9ec
 vendor/lib64/vendor.display.color@1.4.so|1396673668977af0a8afeaa64f891c3b356f958d
 vendor/lib64/vendor.display.color@1.5.so|f1c12eb133698917385d48913358eaffd9a10879
 vendor/lib64/vendor.display.postproc@1.0.so|e56b66d744dd77bd87afbb30cab558acf15709fb
+
+# Display - from PNX_sprout - RKQ1.200906.002/00WW_6_100
+vendor/lib64/libdisplayqos.so|c3d45315871e402053dd1f353e9bde5cbf757277
+vendor/lib64/libqseed3.so|f5990f19a99ec5f33b5a262493c4e642a1429f69
+vendor/lib64/libsdm-color.so|a2b413dea186f9049cb596a6414efc2739694059
+vendor/lib64/libsdm-diag.so|1a99e15c4220e759abeefc0f4020e4a58f359a10
+vendor/lib64/libsdm-disp-vndapis.so|4c6916fed1e304effa4c06c7207fb0e1b604f3ae
+vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # DPM
 system/framework/tcmclient.jar
