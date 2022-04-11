@@ -559,12 +559,12 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lge_sdm845
 
 # LiveDisplay
-#PRODUCT_PACKAGES += \
-#    vendor.lineage.livedisplay@2.0-service.lge_sdm845
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.lge_sdm845
 
 # Touch
-#PRODUCT_PACKAGES += \
-#    vendor.lineage.touch@1.0-service.lge_sdm845
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.lge_sdm845
 
 # USB
 PRODUCT_PACKAGES += \
