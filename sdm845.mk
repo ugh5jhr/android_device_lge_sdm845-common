@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
 
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.1-service.lge
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4 \
