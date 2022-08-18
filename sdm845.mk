@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@6.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio-impl \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -170,9 +170,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
+# Bluetooth ftmdaemon needs libbt-hidlclient.so
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/proprietary/bluetooth/hidl_client
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -193,8 +192,7 @@ PRODUCT_COPY_FILES += \
 
 # Context Hub
 PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl.generic \
-    android.hardware.contexthub@1.0-service
+   android.hardware.contexthub-service.generic
 
 # DRM
 PRODUCT_PACKAGES += \
