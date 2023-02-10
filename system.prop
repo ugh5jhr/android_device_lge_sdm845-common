@@ -54,6 +54,7 @@ ro.telephony.default_network=9
 persist.sys.fflag.override.settings_provider_model=false
 
 # Graphics
+debug.renderengine.backend=threaded
 debug.egl.hw=0
 debug.sf.hw=0
 debug.gralloc.gfx_ubwc_disable=0
