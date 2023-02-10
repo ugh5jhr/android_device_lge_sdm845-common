@@ -490,10 +490,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# RenderScript
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # Qtimapper Shim
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mappershim \
