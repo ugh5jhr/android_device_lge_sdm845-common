@@ -28,8 +28,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-lineage
+    $(COMMON_PATH)/overlay
+
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -182,8 +182,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    Snap \
+    Aperture \
     vendor.qti.hardware.camera.device@1.0.vendor
+
 
 # Context Hub
 PRODUCT_PACKAGES += \
@@ -267,14 +268,14 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
 
 # FM packages
-#PRODUCT_PACKAGES += \
-#	libqcomfm_jni \
-#	android.hardware.broadcastradio@1.0-impl \
-#	FM2 \
-#	qcom.fmradio \
-#	qcom.fmradio.xml
+PRODUCT_PACKAGES += \
+	libqcomfm_jni \
+	android.hardware.broadcastradio@1.0-impl \
+	FM2 \
+	qcom.fmradio \
+	qcom.fmradio.xml
 
-#PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -550,9 +551,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lge_sdm845
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.lge_sdm845
 
 # Touch
 PRODUCT_PACKAGES += \
