@@ -3,7 +3,7 @@
 #
 
 # APEX
-ro.apex.updatable=true
+ro.apex.updatable=false
 
 # Audio
 af.fast_track_multiplier=1
