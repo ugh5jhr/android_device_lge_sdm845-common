@@ -410,6 +410,7 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libgui \
     libgui.vendor \
+    libplatformconfig \
     libstagefrighthw
 
 # Permissions
